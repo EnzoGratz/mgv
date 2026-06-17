@@ -6,16 +6,16 @@
    ═══════════════════════════════════════════════════════════ */
 
 @theme {
-  --color-green:       #1B5E3B;
-  --color-green-light: #E8F0EB;
-  --color-green-hover: #154A2F;
-  --color-accent:      #D4922A;
+  --color-green:       #16452A; /* Deeper, richer forest green */
+  --color-green-light: #E8EDE9;
+  --color-green-hover: #103620;
+  --color-accent:      #D4922A; /* Warm amber/gold */
   --color-accent-light:#FDF3E3;
-  --color-bg:          #FFFFFF;
-  --color-bg-soft:     #F8F8F6;
-  --color-ink:         #1C1C1C;
-  --color-muted:       #717171;
-  --color-border:      #E8E8E8;
+  --color-bg:          #FCFCF9; /* Very soft warm white, like premium paper */
+  --color-bg-soft:     #F3F0E9; /* Warm sandy cream */
+  --color-ink:         #2A2624; /* Very dark warm brown/charcoal, not harsh black */
+  --color-muted:       #7A746E;
+  --color-border:      #E6E2DB;
 
   --font-serif: var(--font-serif);
   --font-sans:  var(--font-sans);

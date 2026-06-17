@@ -29,17 +29,17 @@ const EVENTS = [
 
 export default function EventsSection() {
   return (
-    <section id="termine" className="section bg-[#F8F8F6]">
+    <section id="termine" className="section bg-[var(--color-bg-soft)]">
       <div className="wrap">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-[#D4922A] text-sm font-semibold tracking-wider uppercase mb-3">
+          <p className="text-[var(--color-accent)] text-sm font-semibold tracking-wider uppercase mb-3">
             Termine
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-[#1C1C1C] mb-4">
+          <h2 className="font-serif text-3xl md:text-4xl text-[var(--color-ink)] mb-4">
             Nächste Auftritte
           </h2>
-          <p className="text-[#717171] text-lg max-w-xl mx-auto">
+          <p className="text-[var(--color-muted)] text-lg max-w-xl mx-auto">
             Komm vorbei und erlebe unseren vierstimmigen Klang live.
           </p>
         </div>
@@ -49,14 +49,14 @@ export default function EventsSection() {
           {EVENTS.map((event, i) => (
             <motion.article
               key={i}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-white rounded-xl p-8 border border-[#E8E8E8] hover:shadow-lg transition-shadow"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="bg-white rounded-2xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgba(22,69,42,0.08)] hover:-translate-y-1 transition-all duration-400"
             >
               {/* Date */}
-              <div className="flex items-center gap-2 text-[#1B5E3B] mb-5">
+              <div className="flex items-center gap-2 text-[var(--color-green)] mb-5">
                 <Calendar size={16} />
                 <span className="text-sm font-semibold">{event.date}</span>
               </div>

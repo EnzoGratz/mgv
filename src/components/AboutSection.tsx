@@ -35,33 +35,33 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-[#D4922A] text-sm font-semibold tracking-wider uppercase mb-3">
+            <p className="text-[var(--color-accent)] text-sm font-semibold tracking-wider uppercase mb-3">
               Über uns
             </p>
-            <h2 className="font-serif text-3xl md:text-4xl text-[#1C1C1C] mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl text-[var(--color-ink)] mb-6">
               Mehr als ein Chor.
             </h2>
-            <div className="w-12 h-[2px] bg-[#D4922A] mb-8" />
+            <div className="w-12 h-[2px] bg-[var(--color-accent)] mb-8" />
 
-            <p className="text-[#717171] text-[17px] leading-relaxed mb-5">
+            <p className="text-[var(--color-muted)] text-[17px] leading-relaxed mb-5">
               Der MGV Seeboden ist ein Haufen Männer aus Seeboden und Umgebung, die eines verbindet: die Freude am gemeinsamen Klang. Seit 1908 pflegen wir das Kärntner Liedgut, geistliche Chormusik und die Gemeinschaft untereinander.
             </p>
-            <p className="text-[#717171] text-[17px] leading-relaxed mb-8">
+            <p className="text-[var(--color-muted)] text-[17px] leading-relaxed mb-8">
               Egal ob Tenor oder Bass, ob Handwerker oder Pensionist — Donnerstag um halb acht sind wir alle gleich. Nach der Probe sitzen wir zusammen, lachen und genießen ein Glaserl. Das gehört bei uns einfach dazu.
             </p>
 
             <div className="flex gap-12">
               <div>
-                <p className="text-3xl font-serif text-[#1B5E3B]">30+</p>
-                <p className="text-sm text-[#717171] mt-1">Aktive Sänger</p>
+                <p className="text-3xl font-serif text-[var(--color-green)]">30+</p>
+                <p className="text-sm text-[var(--color-muted)] mt-1">Aktive Sänger</p>
               </div>
               <div>
-                <p className="text-3xl font-serif text-[#1B5E3B]">1908</p>
-                <p className="text-sm text-[#717171] mt-1">Gegründet</p>
+                <p className="text-3xl font-serif text-[var(--color-green)]">1908</p>
+                <p className="text-sm text-[var(--color-muted)] mt-1">Gegründet</p>
               </div>
               <div>
-                <p className="text-3xl font-serif text-[#1B5E3B]">4</p>
-                <p className="text-sm text-[#717171] mt-1">Stimmen</p>
+                <p className="text-3xl font-serif text-[var(--color-green)]">4</p>
+                <p className="text-sm text-[var(--color-muted)] mt-1">Stimmen</p>
               </div>
             </div>
           </motion.div>
