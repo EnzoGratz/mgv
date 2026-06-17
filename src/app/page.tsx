@@ -1,13 +1,17 @@
 import HeroSection from "@/components/HeroSection";
-import KlangSection from "@/components/KlangSection";
-import DabeiSection from "@/components/DabeiSection";
+import AboutSection from "@/components/AboutSection";
+import EventsSection from "@/components/EventsSection";
+import GallerySection from "@/components/GallerySection";
+import JoinSection from "@/components/JoinSection";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
-      <KlangSection />
-      <DabeiSection />
+      <AboutSection />
+      <EventsSection />
+      <GallerySection />
+      <JoinSection />
     </main>
   );
 }
