@@ -51,7 +51,7 @@ export default function FirstVisitHero() {
           className="text-white tracking-[3px] uppercase font-bold mb-12 drop-shadow-lg"
           style={{ fontSize: "clamp(0.8rem, 2vw, 1.1rem)" }}
         >
-          SEIT 1908 – MÄNNERGESANGSVEREIN SEEBODEN
+          SEIT 1894 – MÄNNERGESANGSVEREIN SEEBODEN
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">

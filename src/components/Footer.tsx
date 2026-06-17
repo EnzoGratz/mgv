@@ -4,57 +4,52 @@ import { CookieSettingsLink } from "@/components/CookieBanner";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1C1C1C] text-white/60 pt-16 pb-8">
-      <div className="wrap">
-        {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14 text-sm">
+    <footer className="bg-[#111] text-[#aaa] pb-12 pt-20 border-t border-white/10">
+      <div className="wrap max-w-6xl">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-16 mb-24">
+          
           {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
-            <p className="font-serif text-white text-lg mb-3">MGV Seeboden</p>
-            <p className="leading-relaxed">
-              Vierstimmiger Chorgesang, Kameradschaft und Kärntner Liedgut seit 1908.
+          <div className="max-w-sm">
+            <h3 className="font-serif text-white text-3xl mb-6 tracking-wide">MGV Seeboden</h3>
+            <p className="leading-relaxed font-light text-[#888]">
+              Vierstimmiger Chorgesang in Perfektion. Harte Arbeit, Kameradschaft und die Liebe zum Kärntner Liedgut seit 1894.
             </p>
           </div>
 
-          {/* Kontakt */}
-          <div>
-            <p className="text-white text-xs font-semibold tracking-wider uppercase mb-4">Kontakt</p>
-            <ul className="space-y-2">
-              <li>+43 664 2828082</li>
-              <li>+43 664 73485201</li>
-              <li>
-                <a href="mailto:singen@mgv-seeboden.at" className="hover:text-white transition-colors">
-                  singen@mgv-seeboden.at
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* Links Grid */}
+          <div className="flex flex-col sm:flex-row gap-16 md:gap-24">
+            <div>
+              <p className="text-white text-xs font-bold tracking-[0.15em] uppercase mb-6">Kontakt</p>
+              <ul className="space-y-4 font-light text-sm">
+                <li>
+                  <span className="block text-[#666] text-xs mb-1">Telefon</span>
+                  <a href="tel:+436642828082" className="hover:text-white transition-colors">+43 664 2828082</a>
+                </li>
+                <li>
+                  <span className="block text-[#666] text-xs mb-1">E-Mail</span>
+                  <a href="mailto:singen@mgv-seeboden.at" className="hover:text-white transition-colors">
+                    singen@mgv-seeboden.at
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          {/* Proben */}
-          <div>
-            <p className="text-white text-xs font-semibold tracking-wider uppercase mb-4">Proben</p>
-            <ul className="space-y-2">
-              <li>Jeden Donnerstag</li>
-              <li>19:30 Uhr</li>
-              <li>Kulturhaus Seeboden</li>
-            </ul>
+            <div>
+              <p className="text-white text-xs font-bold tracking-[0.15em] uppercase mb-6">Rechtliches</p>
+              <ul className="space-y-4 font-light text-sm">
+                <li><a href="/impressum" className="hover:text-white transition-colors">Impressum</a></li>
+                <li><a href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</a></li>
+                <li className="pt-2"><CookieSettingsLink /></li>
+              </ul>
+            </div>
           </div>
-
-          {/* Rechtliches */}
-          <div>
-            <p className="text-white text-xs font-semibold tracking-wider uppercase mb-4">Rechtliches</p>
-            <ul className="space-y-2">
-              <li><a href="/impressum" className="hover:text-white transition-colors">Impressum</a></li>
-              <li><a href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</a></li>
-              <li><CookieSettingsLink /></li>
-            </ul>
-          </div>
+          
         </div>
 
         {/* Bottom */}
-        <div className="pt-6 border-t border-white/10 text-xs flex flex-col md:flex-row justify-between gap-2">
-          <p>© {new Date().getFullYear()} MGV Seeboden</p>
-          <p>Seeboden am Millstätter See, Kärnten</p>
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-light tracking-wide text-[#666]">
+          <p>© {new Date().getFullYear()} Männergesangverein Seeboden. Alle Rechte vorbehalten.</p>
+          <p>Exzellenz aus Seeboden am Millstätter See.</p>
         </div>
       </div>
     </footer>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Clock } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const EVENTS = [
   {
@@ -29,60 +29,58 @@ const EVENTS = [
 
 export default function EventsSection() {
   return (
-    <section id="termine" className="section bg-[var(--color-bg-soft)]">
-      <div className="wrap">
+    <section id="termine" className="section bg-white">
+      <div className="wrap max-w-5xl">
         {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-[var(--color-accent)] text-sm font-semibold tracking-wider uppercase mb-3">
-            Termine
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-[var(--color-ink)] mb-4">
-            Nächste Auftritte
-          </h2>
-          <p className="text-[var(--color-muted)] text-lg max-w-xl mx-auto">
-            Komm vorbei und erlebe unseren vierstimmigen Klang live.
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b border-black/5 pb-8">
+          <div>
+            <p className="text-[#D4922A] text-xs font-bold tracking-[0.15em] uppercase mb-4">
+              Termine
+            </p>
+            <h2 className="font-serif text-4xl md:text-5xl text-[#111] leading-tight">
+              Nächste Auftritte
+            </h2>
+          </div>
+          <p className="text-[#777] text-lg max-w-sm md:text-right">
+            Erlebe die Qualität und Hingabe unseres Chores live in Seeboden.
           </p>
         </div>
 
-        {/* Event Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* Event List */}
+        <div className="flex flex-col">
           {EVENTS.map((event, i) => (
-            <motion.article
+            <motion.a
+              href="#"
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-white rounded-2xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_40px_rgba(22,69,42,0.08)] hover:-translate-y-1 transition-all duration-400"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: i * 0.1, ease: [0.25, 0.4, 0, 1] }}
+              className="group relative flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-black/5 hover:bg-black/[0.02] transition-colors px-4 -mx-4 rounded-xl"
             >
-              {/* Date */}
-              <div className="flex items-center gap-2 text-[var(--color-green)] mb-5">
-                <Calendar size={16} />
-                <span className="text-sm font-semibold">{event.date}</span>
-              </div>
-
-              {/* Title */}
-              <h3 className="font-serif text-xl text-[#1C1C1C] mb-3">
-                {event.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-[#717171] text-sm leading-relaxed mb-6">
-                {event.description}
-              </p>
-
-              {/* Meta */}
-              <div className="flex flex-col gap-2 pt-5 border-t border-[#E8E8E8]">
-                <div className="flex items-center gap-2 text-[#717171] text-sm">
-                  <MapPin size={14} />
-                  <span>{event.location}</span>
+              <div className="flex flex-col md:flex-row gap-4 md:gap-16 w-full">
+                {/* Date / Location */}
+                <div className="md:w-1/4 shrink-0">
+                  <p className="text-[#111] font-semibold text-lg mb-1">{event.date}</p>
+                  <p className="text-[#777] text-sm">{event.time} • {event.location}</p>
                 </div>
-                <div className="flex items-center gap-2 text-[#717171] text-sm">
-                  <Clock size={14} />
-                  <span>{event.time}</span>
+                
+                {/* Info */}
+                <div className="md:w-2/4">
+                  <h3 className="font-serif text-2xl text-[#111] mb-2 group-hover:text-[#D4922A] transition-colors">
+                    {event.title}
+                  </h3>
+                  <p className="text-[#555] text-base leading-relaxed">
+                    {event.description}
+                  </p>
                 </div>
               </div>
-            </motion.article>
+              
+              {/* Arrow */}
+              <div className="hidden md:flex items-center justify-end w-16 shrink-0 text-[#ccc] group-hover:text-[#D4922A] group-hover:translate-x-2 transition-all">
+                <ArrowRight size={28} strokeWidth={1.5} />
+              </div>
+            </motion.a>
           ))}
         </div>
       </div>

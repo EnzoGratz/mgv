@@ -13,7 +13,7 @@ export default function KlangSection() {
   return (
     <section id="klang" className="overflow-hidden">
 
-      {/* ── TEIL 1: Split-Screen "Seit 1908" ── */}
+      {/* ── TEIL 1: Split-Screen "Seit 1894" ── */}
       <div className="grid lg:grid-cols-2 min-h-[80vh]">
 
         {/* LEFT: Typografie */}
@@ -30,7 +30,7 @@ export default function KlangSection() {
 
             {/* Die Jahreszahl — RIESIG, als grafisches Element */}
             <div className="font-serif text-[var(--color-primary)] leading-none mb-8" style={{ fontSize: "clamp(4rem, 10vw, 8rem)", opacity: 0.15 }}>
-              1908
+              1894
             </div>
 
             <h2 className="font-serif text-[var(--color-ink)] text-3xl md:text-4xl lg:text-5xl leading-tight mb-6 -mt-12 md:-mt-16">

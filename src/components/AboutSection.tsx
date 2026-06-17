@@ -44,7 +44,7 @@ export default function AboutSection() {
             <div className="w-12 h-[2px] bg-[var(--color-accent)] mb-8" />
 
             <p className="text-[var(--color-muted)] text-[17px] leading-relaxed mb-5">
-              Der MGV Seeboden ist ein Haufen Männer aus Seeboden und Umgebung, die eines verbindet: die Freude am gemeinsamen Klang. Seit 1908 pflegen wir das Kärntner Liedgut, geistliche Chormusik und die Gemeinschaft untereinander.
+              Der MGV Seeboden ist ein Haufen Männer aus Seeboden und Umgebung, die eines verbindet: die Freude am gemeinsamen Klang. Seit 1894 pflegen wir das Kärntner Liedgut, geistliche Chormusik und die Gemeinschaft untereinander.
             </p>
             <p className="text-[var(--color-muted)] text-[17px] leading-relaxed mb-8">
               Egal ob Tenor oder Bass, ob Handwerker oder Pensionist — Donnerstag um halb acht sind wir alle gleich. Nach der Probe sitzen wir zusammen, lachen und genießen ein Glaserl. Das gehört bei uns einfach dazu.
@@ -56,7 +56,7 @@ export default function AboutSection() {
                 <p className="text-sm text-[var(--color-muted)] mt-1">Aktive Sänger</p>
               </div>
               <div>
-                <p className="text-3xl font-serif text-[var(--color-green)]">1908</p>
+                <p className="text-3xl font-serif text-[var(--color-green)]">1894</p>
                 <p className="text-sm text-[var(--color-muted)] mt-1">Gegründet</p>
               </div>
               <div>

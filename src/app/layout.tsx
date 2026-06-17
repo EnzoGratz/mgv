@@ -19,7 +19,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "MGV Seeboden | Singen am See",
-  description: "Männergesangverein Seeboden am Millstätter See — vierstimmiger Chorgesang, Kameradschaft und Kärntner Liedgut seit 1908.",
+  description: "Männergesangverein Seeboden am Millstätter See — vierstimmiger Chorgesang, Kameradschaft und Kärntner Liedgut seit 1894.",
 };
 
 export default function RootLayout({
