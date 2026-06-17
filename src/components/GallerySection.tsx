@@ -17,7 +17,7 @@ export default function GallerySection() {
       <div className="wrap">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-[#1B5E3B] text-sm font-semibold tracking-wider uppercase mb-3">
+          <p className="text-[#D4922A] text-sm font-semibold tracking-wider uppercase mb-3">
             Einblicke
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-[#1C1C1C] mb-4">

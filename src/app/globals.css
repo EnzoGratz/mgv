@@ -9,6 +9,8 @@
   --color-green:       #1B5E3B;
   --color-green-light: #E8F0EB;
   --color-green-hover: #154A2F;
+  --color-accent:      #D4922A;
+  --color-accent-light:#FDF3E3;
   --color-bg:          #FFFFFF;
   --color-bg-soft:     #F8F8F6;
   --color-ink:         #1C1C1C;
@@ -58,11 +60,11 @@ img { max-width: 100%; display: block; }
 /* ── Sections ── */
 
 .section {
-  padding: 100px 0;
+  padding: 64px 0;
 }
 
 @media (min-width: 768px) {
-  .section { padding: 140px 0; }
+  .section { padding: 96px 0; }
 }
 
 /* ── Buttons ── */

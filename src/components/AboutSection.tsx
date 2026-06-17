@@ -35,13 +35,13 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-[#1B5E3B] text-sm font-semibold tracking-wider uppercase mb-3">
+            <p className="text-[#D4922A] text-sm font-semibold tracking-wider uppercase mb-3">
               Über uns
             </p>
             <h2 className="font-serif text-3xl md:text-4xl text-[#1C1C1C] mb-6">
               Mehr als ein Chor.
             </h2>
-            <div className="w-12 h-[2px] bg-[#1B5E3B] mb-8" />
+            <div className="w-12 h-[2px] bg-[#D4922A] mb-8" />
 
             <p className="text-[#717171] text-[17px] leading-relaxed mb-5">
               Der MGV Seeboden ist ein Haufen Männer aus Seeboden und Umgebung, die eines verbindet: die Freude am gemeinsamen Klang. Seit 1908 pflegen wir das Kärntner Liedgut, geistliche Chormusik und die Gemeinschaft untereinander.

@@ -21,7 +21,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-2xl"
         >
-          <p className="text-white/70 text-sm tracking-widest uppercase mb-4">
+          <p className="text-[#D4922A] text-sm tracking-widest uppercase mb-4 font-semibold">
             Männergesangverein · Seit 1908
           </p>
           <h1
@@ -37,7 +37,7 @@ export default function HeroSection() {
             <a href="#termine" className="btn">
               Nächste Termine
             </a>
-            <a href="#mitsingen" className="btn btn-outline border-white text-white hover:bg-white hover:text-[#1C1C1C]">
+            <a href="#mitsingen" className="btn bg-[#D4922A] border-[#D4922A] text-white hover:bg-[#c0841f] hover:border-[#c0841f]">
               Mitsingen
             </a>
           </div>
