@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="MGV Seeboden – edel & traditionell. Männergesang seit 1894." />
+  <meta property="og:title" content="MGV Seeboden – Männergesang seit 1894" />
+  <meta property="og:description" content="Traditionsreicher Männergesangsverein aus Seeboden am Millstätter See. Proben Donnerstag 19:30 im Kulturhaus Seeboden." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b0c10" />
+  <title>MGV Seeboden | Männergesang seit 1894</title>
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --paper:#10121a;
+      --ink:#f2efe8;
+      --muted:#c9c4b8;
+      --gold:#c6a25a;
+      --gold-2:#e4c77a;
+      --line: rgba(198,162,90,.35);
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --radius: 22px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1000px 700px at 20% 0%, rgba(198,162,90,.12), transparent 60%),
+        radial-gradient(900px 600px at 80% 10%, rgba(228,199,122,.08), transparent 55%),
+        linear-gradient(180deg, #07080b 0%, #0b0c10 30%, #07080b 100%);
+      letter-spacing:.2px;
+    }
+
+    a{color:inherit; text-decoration:none}
+    a:hover{color:var(--gold-2)}
+
+    /* Subtle paper texture */
+    .texture{
+      position:fixed; inset:0;
+      pointer-events:none;
+      opacity:.10;
+      background-image:
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="180" height="180" filter="url(%23n)" opacity="0.7"/></svg>');
+      mix-blend-mode:overlay;
+    }
+
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+
+    /* Top bar */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(11,12,16,.90), rgba(11,12,16,.60));
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 220px;
+    }
+    .crest{
+      width:44px; height:44px; border-radius:999px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(228,199,122,.95), rgba(198,162,90,.55) 45%, rgba(120,90,40,.35) 70%, rgba(0,0,0,.15) 100%),
+        linear-gradient(145deg, rgba(255,255,255,.20), rgba(255,255,255,.02));
+      border:1px solid rgba(228,199,122,.35);
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      display:grid; place-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .crest:before{
+      content:"";
+      position:absolute; inset:-40% -40% auto auto;
+      width:80px; height:80px;
+      background: radial-gradient(circle, rgba(255,255,255,.28), transparent 60%);
+      transform: rotate(25deg);
+    }
+    .crest svg{opacity:.95}
+
+    .brand h1{font-size:14px; margin:0; font-weight:700; letter-spacing:.9px}
+    .brand p{margin:3px 0 0; font-size:12px; color:var(--muted); letter-spacing:.6px}
+
+    nav ul{list-style:none; display:flex; gap:18px; padding:0; margin:0; align-items:center}
+    nav a{font-size:13px; color:var(--muted); letter-spacing:.8px; text-transform:uppercase}
+    nav a.active, nav a:hover{color:var(--ink)}
+
+    .cta{
+      display:flex; gap:10px; align-items:center;
+      min-width: 220px;
+      justify-content:flex-end;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(228,199,122,.35);
+      background: linear-gradient(180deg, rgba(198,162,90,.18), rgba(198,162,90,.06));
+      box-shadow: 0 10px 35px rgba(0,0,0,.35);
+      font-size:13px;
+      color:var(--ink);
+      letter-spacing:.6px;
+    }
+    .btn.secondary{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+    }
+    .btn:hover{transform: translateY(-1px)}
+
+    /* Hero */
+    .hero{
+      padding:64px 0 26px;
+      position:relative;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.25fr .85fr;
+      gap:26px;
+      align-items:stretch;
+    }
+    .heroCard{
+      border-radius:var(--radius);
+      background:
+        radial-gradient(700px 450px at 20% 20%, rgba(198,162,90,.16), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: var(--shadow);
+      padding:34px 32px;
+      overflow:hidden;
+      position:relative;
+    }
+    .heroCard:after{
+      content:"";
+      position:absolute; inset:-80px -120px auto auto;
+      width:360px; height:360px;
+      background: radial-gradient(circle at 30% 30%, rgba(228,199,122,.20), transparent 60%);
+      transform: rotate(15deg);
+      pointer-events:none;
+    }
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-size:12px;
+      letter-spacing:1.2px;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .kicker .dot{width:7px; height:7px; border-radius:99px; background:var(--gold)}
+
+    .hero h2{
+      margin:14px 0 10px;
+      font-size:46px;
+      line-height:1.05;
+      letter-spacing:.2px;
+    }
+    .hero h2 span{color:var(--gold-2)}
+
+    .lead{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.65;
+      max-width: 62ch;
+    }
+
+    .heroActions{display:flex; flex-wrap:wrap; gap:12px; margin-top:20px}
+
+    .sideCard{
+      border-radius:var(--radius);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: 0 14px 55px rgba(0,0,0,.45);
+      padding:26px;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      position:relative;
+      overflow:hidden;
+    }
+    .sideCard:before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(135deg, rgba(198,162,90,.12), transparent 45%),
+        radial-gradient(320px 240px at 80% 15%, rgba(228,199,122,.16), transparent 60%);
+      pointer-events:none;
+    }
+
+    .stat{
+      display:flex; align-items:baseline; gap:10px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      padding-bottom:12px;
+    }
+    .stat:last-child{border-bottom:none; padding-bottom:0}
+    .stat strong{font-size:26px; color:var(--gold-2); letter-spacing:.4px}
+    .stat span{font-size:13px; color:var(--muted); letter-spacing:.7px; text-transform:uppercase}
+
+    .divider{
+      margin:26px 0 0;
+      height:1px;
+      background: linear-gradient(90deg, transparent, var(--line), transparent);
+    }
+
+    /* Sections */
+    section{padding:54px 0}
+    .sectionHead{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .sectionHead h3{
+      margin:0;
+      font-size:28px;
+      letter-spacing:.2px;
+    }
+    .sectionHead p{margin:0; color:var(--muted); max-width:60ch; line-height:1.6}
+
+    .grid{
+      display:grid;
+      gap:18px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .card{
+      grid-column: span 4;
+      border-radius:var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: 0 14px 55px rgba(0,0,0,.40);
+      padding:22px;
+      position:relative;
+      overflow:hidden;
+    }
+    .card:after{
+      content:"";
+      position:absolute; inset:auto -80px -80px auto;
+      width:220px; height:220px;
+      background: radial-gradient(circle, rgba(198,162,90,.14), transparent 60%);
+      pointer-events:none;
+    }
+
+    .card h4{margin:0 0 8px; font-size:16px; letter-spacing:.7px; text-transform:uppercase}
+    .card p{margin:0; color:var(--muted); line-height:1.65; font-size:15px}
+
+    /* Events */
+    .events{
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      overflow:hidden;
+      box-shadow: var(--shadow);
+    }
+    .events table{width:100%; border-collapse:collapse}
+    .events th, .events td{padding:16px 18px; border-bottom:1px solid rgba(255,255,255,.08)}
+    .events th{
+      text-align:left;
+      font-size:12px;
+      color:var(--muted);
+      letter-spacing:1.1px;
+      text-transform:uppercase;
+      background: rgba(255,255,255,.03);
+    }
+    .events tr:hover td{background: rgba(198,162,90,.07)}
+    .events td{font-size:15px}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(228,199,122,.28);
+      background: rgba(198,162,90,.10);
+      color:var(--ink);
+      font-size:12px;
+      letter-spacing:.6px;
+      white-space:nowrap;
+    }
+
+    /* Gallery */
+    .gallery{
+      display:grid;
+      gap:14px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .shot{
+      grid-column: span 4;
+      aspect-ratio: 4 / 3;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.10);
+      overflow:hidden;
+      background:
+        radial-gradient(140px 110px at 30% 30%, rgba(228,199,122,.20), transparent 60%),
+        linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      position:relative;
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+    }
+    .shot img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      filter:saturate(1.05) contrast(1.05);
+    }
+    .shot:before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(0deg, rgba(0,0,0,.35), transparent 55%);
+    }
+    .shot span{
+      position:absolute; left:14px; bottom:12px;
+      font-size:12px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color: rgba(242,239,232,.88);
+    }
+
+    /* Contact */
+    .contact{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      align-items:start;
+    }
+    .panel{
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      box-shadow: var(--shadow);
+      padding:24px;
+    }
+    .panel h4{margin:0 0 10px; font-size:16px; letter-spacing:.7px; text-transform:uppercase}
+
+    .list{margin:0; padding:0; list-style:none; display:grid; gap:10px}
+    .list li{color:var(--muted); line-height:1.6}
+    .list b{color:var(--ink); font-weight:700}
+
+    form{display:grid; gap:12px}
+    label{display:grid; gap:6px; font-size:12px; color:var(--muted); letter-spacing:1px; text-transform:uppercase}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.20);
+      color:var(--ink);
+      font-family: ui-serif, Georgia, serif;
+      outline:none;
+    }
+    textarea{min-height:120px; resize:vertical}
+    input:focus, textarea:focus{border-color: rgba(228,199,122,.45); box-shadow: 0 0 0 4px rgba(198,162,90,.12)}
+
+    /* Footer */
+    footer{
+      padding:34px 0 46px;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:var(--muted);
+    }
+    .foot{
+      display:flex; flex-wrap:wrap; gap:14px;
+      align-items:center; justify-content:space-between;
+    }
+    .fine{font-size:13px; line-height:1.6}
+
+    /* Responsive */
+    @media (max-width: 960px){
+      .heroGrid{grid-template-columns: 1fr;}
+      .cta{display:none}
+      nav ul{gap:14px}
+      .card{grid-column: span 6;}
+      .contact{grid-template-columns: 1fr}
+      .gallery .shot{grid-column: span 6;}
+    }
+    @media (max-width: 620px){
+      .hero h2{font-size:38px}
+      nav{display:none}
+      .card{grid-column: span 12;}
+      .gallery .shot{grid-column: span 12;}
+      .events th:nth-child(3), .events td:nth-child(3){display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="texture" aria-hidden="true"></div>
+
+  <header>
+    <div class="wrap nav" role="navigation" aria-label="Hauptnavigation">
+      <a class="brand" href="#top">
+        <div class="crest" aria-hidden="true">
+          <!-- Simple monogram crest (SVG) -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 18V6h3l5 7 5-7h3v12h-3V10l-5 7-5-7v8H4Z" fill="rgba(11,12,16,.92)"/>
+          </svg>
+        </div>
+        <div>
+          <h1>MGV Seeboden</h1>
+          <p>Chor • edel & traditionell • seit 1894</p>
+        </div>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a class="active" href="#ueber">Über uns</a></li>
+          <li><a href="#termine">Termine</a></li>
+          <li><a href="#repertoire">Repertoire</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="cta">
+        <a class="btn secondary" href="#kontakt">Anfragen</a>
+        <a class="btn" href="#mitsingen">Mitsingen</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div class="heroGrid">
+        <div class="heroCard">
+          <div class="kicker"><span class="dot"></span> Männergesang • Gemeinschaft • Klangkultur</div>
+          <h2>Tradition, die <span>klingt</span>.</h2>
+          <p class="lead">
+            Der MGV Seeboden steht für gepflegten Chorklang, würdige Auftritte und gelebte Kameradschaft.
+            Seit der Gründung im Jahr 1894 tragen wir das Kärntner Liedgut sowie geistliche und weltliche Chormusik in die Gegenwart – mit Haltung, Herz und Harmonie.
+          </p>
+          <div class="heroActions">
+            <a class="btn" href="#termine">Nächster Auftritt</a>
+            <a class="btn secondary" href="#repertoire">Repertoire entdecken</a>
+          </div>
+          <div class="divider"></div>
+          <p class="lead" style="margin-top:18px; font-size:14px; max-width:72ch">
+            <b>Kontakt & Proben:</b> Donnerstag 19:30 im MGV‑Probelokal (Kulturhaus Seeboden) • Treffling 266, 9871 Seeboden • <a href="mailto:singen@mgv-seeboden.at">singen@mgv-seeboden.at</a>
+          </p>
+        </div>
+
+        <aside class="sideCard" aria-label="Kurzinfo">
+          <div class="stat"><strong>1894</strong><span>Gründungsjahr</span></div>
+          <div class="stat"><strong>Do 19:30</strong><span>Probe im Kulturhaus</span></div>
+          <div class="stat"><strong>Auftritte</strong><span>Kirche • Konzert • Fest</span></div>
+          <a class="btn" href="#mitsingen" style="margin-top:10px; width:max-content">Jetzt mitsingen</a>
+        </aside>
+      </div>
+    </div>
+
+    <section id="ueber">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h3>Über uns</h3>
+            <p>
+              Ein traditionsreicher Männergesangverein mit Sinn für Stil, Disziplin und Wärme.
+              Wir pflegen klassische Chorliteratur, geistliche Werke und ausgewählte Volkslieder.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h4>Unsere Geschichte</h4>
+            <p>
+              Seit 1894 ist der MGV Seeboden fester Bestandteil des Kulturlebens von Seeboden am Millstätter See.
+              Generationen von Sängern haben den Verein getragen – mit Respekt vor dem Erbe und Freude am Klang.
+            </p>
+          </article>
+          <article class="card">
+            <h4>Unser Klang</h4>
+            <p>
+              Gepflegte Intonation, klare Artikulation und ein runder Chorsound.
+              Unser Ziel: berührende Momente – würdig, authentisch und nahbar.
+            </p>
+          </article>
+          <article class="card">
+            <h4>Gemeinschaft</h4>
+            <p>
+              Chor bedeutet Zusammenhalt. Bei uns zählen Verlässlichkeit, Humor und gegenseitige Unterstützung –
+              in der Probe wie auf der Bühne.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="termine">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h3>Termine</h3>
+            <p>
+              Der MGV Seeboden gestaltet regelmäßig Konzerte, kirchliche Feiern und kulturelle Veranstaltungen in der Region.
+              (Beispiele – bitte ersetzen.)
+            </p>
+          </div>
+        </div>
+
+        <div class="events" role="region" aria-label="Termine">
+          <table>
+            <thead>
+              <tr>
+                <th>Datum</th>
+                <th>Veranstaltung</th>
+                <th>Ort</th>
+                <th>Info</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="pill">Sa • 14.03.</span></td>
+                <td>Frühlingskonzert – „Abend der Harmonien“</td>
+                <td>Gemeindesaal Seeboden</td>
+                <td><span class="pill">Beginn 19:30</span></td>
+              </tr>
+              <tr>
+                <td><span class="pill">So • 05.04.</span></td>
+                <td>Kirchlicher Festgottesdienst</td>
+                <td>Pfarrkirche</td>
+                <td><span class="pill">Musikalische Gestaltung</span></td>
+              </tr>
+              <tr>
+                <td><span class="pill">Fr • 19.06.</span></td>
+                <td>Sommerabend am See</td>
+                <td>Uferpromenade</td>
+                <td><span class="pill">Open Air</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="repertoire">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h3>Repertoire</h3>
+            <p>
+              Das Repertoire des MGV Seeboden verbindet traditionelle Männerchorliteratur mit geistlichen Werken und ausgewählten modernen Arrangements.
+              Ergänze konkrete Werke/Komponisten nach Bedarf.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h4>Geistlich</h4>
+            <p>Motetten, Messsätze und kirchliche Gesänge – regelmäßig bei Gottesdiensten und kirchlichen Festen.</p>
+          </article>
+          <article class="card">
+            <h4>Klassisch</h4>
+            <p>Romantische Männerchöre, Kunstlieder und konzertante Programme.</p>
+          </article>
+          <article class="card">
+            <h4>Kärntnerlied & Volkslied</h4>
+            <p>Pflege des Kärntnerliedes und ausgewählter Volkslieder – identitätsstiftend und regional verwurzelt.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galerie">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h3>Galerie</h3>
+            <p>
+              Platzhalter-Kacheln: Ersetze sie durch echte Fotos.
+              Tipp: Nutze Bilder in 1600×1200 oder 1920×1440 für beste Wirkung.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery" aria-label="Bildergalerie">
+          <figure class="shot" aria-label="Seeboden am Millstätter See">
+            <img loading="lazy" src="https://austria-forum.org/attach/Wissenssammlungen/Bildlexikon_%C3%96sterreich/Orte_in_K%C3%A4rnten/Seeboden_am_Millst%C3%A4tter_See/Panorama/scaled-900x172-Panoseeboden.jpg" alt="Panorama von Seeboden am Millstätter See" />
+            <span>Seeboden</span>
+          </figure>
+          <figure class="shot" aria-label="Chor und Orchester">
+            <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/be/FHM-Choir-Orchestra-mk2006-04.jpg" alt="Chor und Orchester bei einem Konzert" />
+            <span>Konzert</span>
+          </figure>
+          <figure class="shot" aria-label="Chorauftritt">
+            <img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Treorchy%20Male%20Choir.jpg?width=1600" alt="Männerchor bei einem Auftritt" />
+            <span>Männerchor</span>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="mitsingen">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h3>Mitsingen</h3>
+            <p>
+              Du singst gerne Bass, Bariton, Tenor oder Lead? Komm unverbindlich zur Probe.
+              Keine Sorge: Wir helfen beim Einstieg.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card" style="grid-column: span 6">
+            <h4>Proben</h4>
+            <p>
+              <b>Wann:</b> Donnerstag, 19:30 Uhr<br/>
+              <b>Wo:</b> Kulturhaus Seeboden<br/>
+              <b>Ort:</b> Treffling 266, 9871 Seeboden
+            </p>
+          </article>
+          <article class="card" style="grid-column: span 6">
+            <h4>Was du mitbringst</h4>
+            <p>
+              Freude am gemeinsamen Klang, Zuverlässigkeit und Offenheit.
+              Notenkenntnisse sind hilfreich, aber nicht zwingend.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h3>Kontakt</h3>
+            <p>
+              Für Einladungen, Kooperationen oder Anfragen.
+              (Bitte E-Mail/Telefon/Adresse ersetzen.)
+            </p>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="panel">
+            <h4>Verein</h4>
+            <ul class="list">
+              <li><b>Obmann:</b> +43 664 2828082</li>
+              <li><b>Chorleiter:</b> +43 664 73485201</li>
+              <li><b>E-Mail:</b> <a href="mailto:singen@mgv-seeboden.at">singen@mgv-seeboden.at</a></li>
+              <li><b>Adresse:</b> Treffling 266, 9871 Seeboden am Millstätter See</li>
+            </ul>
+            <div class="divider"></div>
+            <p class="lead" style="margin-top:16px; font-size:14px">
+              Optional: Verlinke hier auch Facebook/Instagram/YouTube oder einen Pressetext als PDF.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h4>Nachricht senden</h4>
+            <form onsubmit="event.preventDefault(); alert('Danke! (Demo) Bitte Formular mit Backend verbinden.');">
+              <label>Name
+                <input required name="name" placeholder="Vor- und Nachname" />
+              </label>
+              <label>E-Mail
+                <input required type="email" name="email" placeholder="name@beispiel.at" />
+              </label>
+              <label>Nachricht
+                <textarea required name="msg" placeholder="Worum geht es?"></textarea>
+              </label>
+              <button class="btn" type="submit">Absenden</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div class="fine">
+        © <span id="y"></span> MGV Seeboden • seit 1894 • Alle Rechte vorbehalten
+      </div>
+      <div class="fine">
+        <a href="#top">Nach oben</a> · <a href="#kontakt">Impressum/Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // simple active-link highlighting
+    const links = Array.from(document.querySelectorAll('nav a'));
+    const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const id = '#' + e.target.id;
+          links.forEach(a=>a.classList.toggle('active', a.getAttribute('href') === id));
+        }
+      })
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0.01 });
+
+    sections.forEach(s=>obs.observe(s));
+  </script>
+</body>
+</html>
