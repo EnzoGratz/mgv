@@ -30,16 +30,16 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.4, 0, 1] }}
           className="max-w-3xl flex flex-col items-center"
         >
-          <p className="text-[#D4922A] text-xs md:text-sm tracking-[0.2em] uppercase mb-6 font-semibold drop-shadow-md">
-            Männergesangverein · Seit 1894
+          <p className="text-[#D4922A] text-sm md:text-base tracking-[0.3em] uppercase mb-4 font-semibold drop-shadow-md">
+            Männergesangsverein seit 1894
           </p>
           <h1
-            className="font-serif text-white mb-6 leading-[1.1] drop-shadow-lg"
-            style={{ fontSize: "clamp(3rem, 8vw, 6rem)" }}
+            className="font-serif text-white mb-8 leading-[1.0] drop-shadow-2xl"
+            style={{ fontSize: "clamp(4rem, 12vw, 8rem)", textShadow: "0 10px 30px rgba(0,0,0,0.5)" }}
           >
-            Singen verbindet.<br />Seit Generationen.
+            MGV Seeboden
           </h1>
-          <p className="text-white/80 text-lg md:text-xl max-w-xl mb-10 leading-relaxed font-light">
+          <p className="text-white/90 text-lg md:text-2xl max-w-2xl mb-12 leading-relaxed font-light drop-shadow-md">
             Vierstimmiger Chorgesang am Millstätter See — getragen von Kameradschaft, Heimatliebe und höchster musikalischer Qualität.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">

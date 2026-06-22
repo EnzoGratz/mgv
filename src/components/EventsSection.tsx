@@ -5,25 +5,32 @@ import { ArrowRight } from "lucide-react";
 
 const EVENTS = [
   {
-    title: "Frühlingssingen",
-    date: "21. März 2026",
-    time: "19:30 Uhr",
+    title: "Seebodner Kirchtag — Auftakt",
+    date: "25. Juli 2026",
+    time: "Abends",
+    location: "Festwiese Seeboden",
+    description: "Feierlicher Auftakt zum traditionellen Seebodner Kirchtag auf der Festwiese — seit 1948 vom MGV Seeboden veranstaltet.",
+  },
+  {
+    title: "Seebodner Kirchtag — Festkonzert",
+    date: "26. Juli 2026",
+    time: "Vormittags",
+    location: "Festwiese Seeboden",
+    description: "Festgottesdienst und Festkonzert beim Seebodner Kirchtag mit dem MGV Seeboden und Gastchören.",
+  },
+  {
+    title: "Karntnarisch g'sungen",
+    date: "30. Juli 2026",
+    time: "19:00 Uhr",
+    location: "Foyer Kulturhaus Seeboden",
+    description: "Gemütliches Beisammensein mit Kärntner Liedern im stimmungsvollen Foyer des Kulturhauses.",
+  },
+  {
+    title: "Jugendsingtag",
+    date: "21. November 2026",
+    time: "Ganztags",
     location: "Kulturhaus Seeboden",
-    description: "Wir begrüßen den Frühling mit Liedern aus dem Kärntner Liedgut und Gastchören aus der Region.",
-  },
-  {
-    title: "Seefest am See",
-    date: "15. Juli 2026",
-    time: "18:00 Uhr",
-    location: "Promenade am Millstätter See",
-    description: "Open-Air Singen direkt am Wasser. Mit Bier, Brezen und bestem Blick auf die Berge.",
-  },
-  {
-    title: "Adventskonzert",
-    date: "12. Dezember 2026",
-    time: "17:00 Uhr",
-    location: "Pfarrkirche Seeboden",
-    description: "Besinnliche Chorwerke und Kärntner Weihnachtslieder in der stimmungsvollen Pfarrkirche.",
+    description: "Jugendsingtag unter Mitwirkung des MGV Seeboden und der Sängergemeinschaft Kärntner Oberland.",
   },
 ];
 

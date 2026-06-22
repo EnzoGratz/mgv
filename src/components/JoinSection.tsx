@@ -37,11 +37,11 @@ export default function JoinSection() {
           >
             {/* Email Action */}
             <a
-              href="mailto:obmann@mgv-seeboden.at?subject=Ich möchte mitsingen!"
+              href="mailto:singen@mgv-seeboden.at?subject=Ich möchte mitsingen!"
               className="group relative flex flex-col items-center justify-center p-8 bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl transition-all duration-300 shadow-lg"
             >
               <span className="text-white font-medium text-lg mb-2">Nachricht senden</span>
-              <span className="text-[#888] text-sm group-hover:text-[#aaa] transition-colors">obmann@mgv-seeboden.at</span>
+              <span className="text-[#888] text-sm group-hover:text-[#aaa] transition-colors">singen@mgv-seeboden.at</span>
             </a>
 
             {/* Phone Action */}

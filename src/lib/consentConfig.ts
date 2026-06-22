@@ -98,7 +98,7 @@ export const SERVICE_REGISTRY = {
     name: "YouTube",
     category: "external_media" as ConsentCategory,
     enabled: true,
-    baseUrl: "https://www.youtube.com/channel/UCxxxxxxxxxxxxxxx", // TODO: echte Channel-URL
+    baseUrl: "https://www.youtube.com/@mgvseeboden",
   },
   instagram: {
     name: "Instagram",
