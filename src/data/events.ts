@@ -45,7 +45,7 @@ export const ALL_EVENTS: MGVEvent[] = [
     subtitle: "5. Auflage mit Bernhard Viktorin",
     location: "Kulturhaus Seeboden",
     description:
-      "Die 5. Ausgabe unserer beliebten Reihe „Kabarett im Konzert" — mit Bernhard Viktorin als Gastkabarettist, umrahmt von humorigen Chorliedern des MGV Seeboden.",
+      "Die 5. Ausgabe unserer beliebten Reihe „Kabarett im Konzert“ — mit Bernhard Viktorin als Gastkabarettist, umrahmt von humorigen Chorliedern des MGV Seeboden.",
     category: "concert",
     imageUrl: "/gallery-concert.png",
   },
@@ -215,7 +215,7 @@ export const HISTORIC_ENTRIES = [
     year: "1899",
     title: "Umbenennung in MGV Seeboden",
     description:
-      "Auf Antrag von Franz Dietrich wurde bei der Jahreshauptversammlung am 18. Februar 1899 die Umbenennung von „MGV Seeboden-Unterhaus" in „MGV Seeboden" beschlossen.",
+      "Auf Antrag von Franz Dietrich wurde bei der Jahreshauptversammlung am 18. Februar 1899 die Umbenennung von „MGV Seeboden-Unterhaus“ in „MGV Seeboden“ beschlossen.",
     imageUrl: "/gallery-bw.png",
   },
   {

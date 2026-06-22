@@ -63,7 +63,7 @@ export default function EventsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.1, ease: [0.25, 0.4, 0, 1] }}
-              className="group relative flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-black/5 hover:bg-black/[0.02] transition-colors px-4 -mx-4 rounded-xl"
+              className="group relative flex flex-col md:flex-row md:items-center justify-between py-8 md:py-10 border-b border-transparent md:border-black/5 hover:bg-white hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 px-6 -mx-6 rounded-2xl"
             >
               <div className="flex flex-col md:flex-row gap-4 md:gap-16 w-full">
                 {/* Date / Location */}

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -8,25 +9,48 @@ export default function AboutSection() {
       <div className="wrap">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-          {/* Images */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 gap-4"
-          >
-            <img
-              src="/gallery-choir-color.png"
-              alt="MGV Seeboden beim Singen"
-              className="rounded-xl object-cover w-full h-64 lg:h-80"
-            />
-            <img
-              src="/gallery-beer.png"
-              alt="Gemeinschaft nach der Probe"
-              className="rounded-xl object-cover w-full h-64 lg:h-80 mt-8"
-            />
-          </motion.div>
+          {/* Images Collage */}
+          <div className="relative h-[400px] lg:h-[500px] w-full hidden md:block">
+            <motion.div
+              initial={{ opacity: 0, x: -30, y: 20 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="absolute top-0 right-0 w-[85%] h-[80%] rounded-2xl overflow-hidden shadow-2xl z-10"
+            >
+              <Image
+                src="/gallery-choir-color.png"
+                alt="MGV Seeboden beim Singen"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30, y: -20 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="absolute bottom-0 left-0 w-[75%] h-[65%] rounded-2xl overflow-hidden shadow-2xl z-20 ring-4 ring-white"
+            >
+              <Image
+                src="/gallery-beer.png"
+                alt="Gemeinschaft nach der Probe"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </motion.div>
+          </div>
+          {/* Mobile Fallback */}
+          <div className="md:hidden flex flex-col gap-4">
+             <div className="relative h-64 w-full rounded-2xl overflow-hidden shadow-xl">
+               <Image src="/gallery-choir-color.png" alt="Singen" fill className="object-cover" />
+             </div>
+             <div className="relative h-64 w-full rounded-2xl overflow-hidden shadow-xl">
+               <Image src="/gallery-beer.png" alt="Gemeinschaft" fill className="object-cover" />
+             </div>
+          </div>
 
           {/* Text */}
           <motion.div

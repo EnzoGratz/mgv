@@ -18,8 +18,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mgv-seeboden.at"),
   title: "MGV Seeboden | Singen am See",
   description: "Männergesangverein Seeboden am Millstätter See — vierstimmiger Chorgesang, Kameradschaft und Kärntner Liedgut seit 1894.",
+  openGraph: {
+    title: "MGV Seeboden | Singen am See",
+    description: "Männergesangverein Seeboden am Millstätter See — vierstimmiger Chorgesang, Kameradschaft und Kärntner Liedgut seit 1894.",
+    url: "https://mgv-seeboden.at",
+    siteName: "MGV Seeboden",
+    images: [
+      {
+        url: "/gallery-choir-color.png",
+        width: 1200,
+        height: 630,
+        alt: "MGV Seeboden Chor",
+      },
+    ],
+    locale: "de_AT",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

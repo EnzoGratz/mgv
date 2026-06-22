@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -12,10 +13,12 @@ export default function HeroSection() {
         animate={{ scale: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
-        <img
+        <Image
           src="/hero-lake.png"
           alt="Millstätter See"
-          className="w-full h-full object-cover"
+          fill
+          priority
+          className="object-cover"
         />
       </motion.div>
       
@@ -53,16 +56,6 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-      >
-        <span className="text-white/50 text-xs tracking-widest uppercase">Entdecken</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-white/50 to-transparent" />
-      </motion.div>
     </section>
   );
 }
